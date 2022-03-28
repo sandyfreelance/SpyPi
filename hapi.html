@@ -1,0 +1,167 @@
+<html>
+<head>
+<!--  <link rel="stylesheet" href="http://hapi-server.org/assets/css/style.css?v=4bb64febca814d7976fa5caf433a0b68e27a0f66">-->
+<style type="text/css" media="screen">
+
+{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+.markdown-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:22px;line-height:1.5;word-wrap:break-word}
+.markdown-body h1{padding-top:0.6em; padding-bottom:0.3em;font-size:2em;border-bottom:1px solid #eaecef}
+.markdown-body h2{padding-bottom:0.3em;font-size:1.5em;border-bottom:1px solid #eaecef}
+.markdown-body h3{font-size:1.25em}
+.container-lg{border:2px solid black;border-radius:1em;background-color:white}
+
+
+  .row {
+  display: flex;
+  }
+  .column {
+  flex: 50%;
+  }
+  .full {
+  flex: 100%;
+  }
+  /* from https://www.w3schools.com/howto/howto_css_fixed_menu.asp */
+  /* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #c60; /* #777; */
+  position: fixed; /* Set the navbar to fixed position */
+  border-radius: 1em;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 99%; /* Full width */
+}
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.navbar img {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+
+  </style>
+  
+</head>
+<body>
+<div class="container-lg markdown-body">
+
+  
+<div class="navbar">
+<img src='hapilogo.png' alt='logo' width='10%' height='auto'>
+<a href="https://github.com/hapi-server/data-specification">Specification</a>
+<a href="http://hapi-server.org/servers/">Get Data</a>
+<a href="https://www.youtube.com/watch?v=dBV2yxoHkDU">YouTube Demo</a>
+<a href="https://github.com/hapi-server">GitHub</a>
+<a href="#data">For Data Centers</a>
+<a href="#dev">For Developers</a>
+</div>
+
+<div class="main">
+
+  <div class="row">
+<div class="full">
+    <h1>About HAPI</h1>
+      <p>The Heliophysics Data Application Programmer’s Interface (HAPI) specification is a time series download and streaming format specification. A 1-page summary is given in <a href="/docs/HAPI_OnePager_v4.pdf">HAPI_OnePager.pdf</a>. A more detailed overview is given in the JGR article <a href="/docs/Weigel_2021_HAPI-An_API_Standard_for_Accessing_Heliophysics_Time_Series_Data.pdf">Weigel et al., 2021</a> and the presentation by Vandegriff et al. (<a href="/docs/HAPI_overview.pdf">pdf</a>|<a href="https://youtu.be/EIMIyXfpbxI">YouTube video</a>).</p>
+<p>The HAPI specification was <a href="/docs/2021_COSPAR.pdf">recommended by COSPAR</a> in 2018 as the common data access API for space science and space weather data.</p>
+<p>When data are available from a HAPI server, there is no need to download data files and write custom file reader programs. Using a HAPI client library, data can be loaded into an array using a single command using HAPI <a href="https://github.com/hapi-server/client-idl">IDL</a>, <a href="https://github.com/hapi-server/client-matlab">MATLAB</a>, and <a href="https://github.com/hapi-server/client-python">Python</a> clients. Data from HAPI servers is also accessible to users of <a href="http://autoplot.org/">Autoplot</a>, <a href="https://github.com/spedas/pyspedas">PySPEDAS</a>, and <a href="http://spedas.org/wiki/index.php?title=Heliophysics_Application_Programmer%E2%80%99s_Interface">IDL SPEDAS</a>. Sample scripts and containing instructions for accessing data using the above–listed clients may be found by selecting a server, dataset, and time range at the web interface <a href="http://hapi-server.org/servers/">http://hapi-server.org/servers/</a>.</p>
+<p>A list of HAPI-compliant data servers is available at <a href="http://hapi-server.org/servers/">http://hapi-server.org/servers/</a>.</p>
+<p>The <a href="https://github.com/hapi-server?type=all&amp;language=&amp;sort=name">hapi-server GitHub project</a> contains a collection of repositories for HAPI–related software and documentation, including client and server libraries and code for verifying and testing a HAPI server.</p>
+
+</div>
+
+  </div>
+
+  <div class="row">
+<div class="column">
+<center>      <h2>For Scientists</h2></center>
+<ul>
+<li> Get Data:
+Use the interface at <a href="http://hapi-server.org/servers/">http://hapi-server.org/servers/</a> to download data from your browser, generate ~10-line wget/curl/IDL/MATLAB/Python scripts to download data, or create preview plots.
+</li>
+<li>Demo:
+  A demonstration of using 5 different clients to access data from a HAPI server is shown in a <a href="https://www.youtube.com/watch?v=dBV2yxoHkDU">YouTube video</a>.
+  </li>
+<li>Client Software:
+Data from any <a href="http://hapi-server.org/servers/">HAPI-compliant server</a> can be easily accessed using IDL, Java, MATLAB, Python, and other languages. The repositories for HAPI libraries in these languages is available <a href="https://github.com/hapi-server?q=client-">at GitHub</a>.
+</li>
+<li>List of Servers: A list of HAPI-compliant data servers is available at <a href="">http://hapi-server.org/servers/</a>.
+</li>
+</ul>
+
+    </div>
+
+<div class="column">
+<center>      <h2 id="dev">For Developers</h2></center>
+<ul>
+  <li>Github:
+    All software related to the HAPI specification is available from its <a href="https://github.com/hapi-server/">GitHub project page</a>. Software includes clients, servers, and a server verifier/validator.
+</li>
+<li>Email lists:
+<ul>
+ <li><a href="https://groups.io/g/hapi-news">Announcements</a> about HAPI-related software</li>
+  <li><a href="https://groups.io/g/hapi-dev">Discussion</a> of the specification and telecon announcements</li>
+  <li><a href="https://groups.io/g/hapi-help/">Help</a> on HAPI-related issues</li>
+</ul>
+</ul>
+    </div>
+  </div>
+
+<div class="row">
+<div class="column">
+<center>     <h2 id="data">For Data Centers</h2></center>
+<ul>
+  <li>API and Spec:
+    The HAPI specification describes a minimum set of capabilities needed for a server to allow access to the time series data values within one or more data collections.
+    </li>
+<ul>
+<li>Current version (3.0.0): <a href="https://github.com/hapi-server/data-specification/raw/master/hapi-3.0.0/HAPI-data-access-spec-3.0.0.pdf">PDF</a> | <a href="https://github.com/hapi-server/data-specification/blob/master/hapi-3.0.0/HAPI-data-access-spec-3.0.0.md">HTML</a></li>
+  <li><a href="https://github.com/hapi-server/data-specification/blob/master/hapi-dev/HAPI-data-access-spec-dev.md">Draft 3.1 version</a></li>
+</ul>
+<li>Server s/w: 
+<ul>
+  <li>Prior to writing server-side software, we suggest trying <a href="https://github.com/hapi-server/server-nodejs">the generic stand-alone HAPI server</a>. If you can generate <a href="https://github.com/hapi-server/data-specification/blob/master/hapi-3.0.0/HAPI-data-access-spec-3.0.0.md#data-stream-content#data-with-header">HAPI ASCII</a> of your datasets with a command line program, you can use this server to quickly get a HAPI-compliant server running on your site.
+    </li>
+  <li>
+    User-contributed source code for servers in various languages is available at <a href="https://github.com/hapi-server?q=server-">at GitHub</a>. This contributed code is typically not up-to-date or generalized but it may be useful for getting started.
+    </li>
+  <li>
+    See the <a href="https://github.com/hapi-server/server-ui">server-ui</a> repository for a basic server entry/overview page template for a HAPI server. Code is also available for a web interface for generating URLs to download data, plotting data from a HAPI server, and generating scripts that read and plot the selected parameter (the code used by <a href="http://hapi-server.org/servers/">http://hapi-server.org/servers/</a>).
+    </li>
+  <li>
+Server developers can test their server for HAPI-compliance using <a href="http://hapi-server.org/verify">the HAPI server verification service</a>.    
+    </li>
+</ul>
+</ul>
+    </div>
+</div>
+
+<font size=-1>Copyright &copy;2022 HAPI Consortium</font>
+
+
+</div>
+
+</body>
+</html>
